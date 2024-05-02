@@ -1,7 +1,7 @@
 #include <glib.h>
 #include <stdio.h>
 
-#include "run.h"
+#include "main.h"
 
 int main() {
   int k = 17;
