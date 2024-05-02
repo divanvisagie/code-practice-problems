@@ -4,6 +4,7 @@
 #include <stdarg.h>
 #include <stddef.h>
 #include <stdint.h>
+#include <stdlib.h>
 
 #include "run.h"
 
@@ -13,6 +14,8 @@ static void test_case_1(void **state) {
 
   assert_int_equal(result_count, 1);
   assert_string_equal("7 and 10 add up to 17", results[0]);
+
+  free(results);
 }
 
 static void test_case_2(void **state) {
@@ -22,6 +25,8 @@ static void test_case_2(void **state) {
   assert_int_equal(result_count, 2);
   assert_string_equal("4 and 10 add up to 14", results[0]);
   assert_string_equal("7 and 7 add up to 14", results[1]);
+
+  free(results);
 }
 
 // Group all test cases together
